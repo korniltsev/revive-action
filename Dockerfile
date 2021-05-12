@@ -2,7 +2,7 @@ FROM golang:1.16.3 as build-env
 
 ENV CGO_ENABLED=0
 
-RUN go get -v github.com/mgechev/revive@v1
+RUN go get -v github.com/pyroscope-io/revive@v1.0.6-0.20210330033039-4a71146f9dc1
 
 WORKDIR /tmp/github.com/morphy2k/revive-action
 COPY . .
