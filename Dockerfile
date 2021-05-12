@@ -2,6 +2,7 @@ FROM golang:1.16.3 as build-env
 
 ENV CGO_ENABLED=0
 
+WORKDIR /tmp/github.com/petethepig/revive-action-tmp
 RUN go mod init github.com/petethepig/revive-action-tmp
 RUN go mod edit -replace=github.com/mgechev/revive=github.com/pyroscope-io/revive@v1.0.6-0.20210330033039-4a71146f9dc1
 RUN go get -v github.com/mgechev/revive
